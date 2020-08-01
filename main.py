@@ -7,6 +7,7 @@ from ola.ClientWrapper import ClientWrapper
 path='scenes/'
 
 universe=1
+frame=50
 
 #load yaml files into lists
 sceneA=load_scene(path+'sceneA.yaml')
@@ -16,7 +17,7 @@ sceneD=load_scene(path+'sceneD.yaml')
 sceneE=load_scene(path+'sceneE.yaml')
 
 stage=sceneA
-
+scene_change(stage)
 
 print(sceneA)
 print(sceneB)
@@ -33,7 +34,6 @@ def DmxSent(state):
 #change to 'scene'
 def scene_change(scene):
 	client.SendDmx(universe,scene,DmxSent)
-	print(scene)
 	wrapper.Run()
 	
 
@@ -46,3 +46,17 @@ time.sleep(3)
 scene_change(sceneD)
 time.sleep(3)
 scene_change(sceneE)
+
+def scene_fade(scene)
+	delta=ar.array('B',[])
+	i_channel)=0
+	for channel in scene
+		delta.append(scene[i_channel]-stage[i_channel])
+		i+=1
+	print(delta)
+	
+scene_fade(sceneA)
+scene_fade(sceneB)
+scene_fade(sceneC)
+scene_fade(sceneD)
+scene_fade(sceneE)
