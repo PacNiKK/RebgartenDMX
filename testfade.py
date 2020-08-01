@@ -1,6 +1,7 @@
 import time
 from filehandler import load_scene
 from ola.ClientWrapper import ClientWrapper
+import array as ar
 
 #path to scene files
 path='scenes/'
@@ -38,7 +39,7 @@ def SendDMXFrame():
   wrapper.AddEvent(TICK_INTERVAL, SendDMXFrame)
 
   # compute frame here
-  data = array.array('B')
+  data = ar.array('B')
   global loop_count
   data.append(loop_count % 255)
   loop_count += 1
