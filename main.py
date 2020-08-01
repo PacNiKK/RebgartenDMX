@@ -59,7 +59,7 @@ def scene_fade(scene,fade_time):
 	
 def button_callback(channel):
 	if channel==3:
-		scene_fade(sceneA,fade)
+		scene_change(sceneA)
 	elif channel==5:
 		scene_fade(sceneB,fade)
 	elif channel==7:
