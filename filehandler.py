@@ -6,7 +6,7 @@ import numpy as np
 #imports a yaml list in 'path' and returns it as an array
 def load_scene(path):
 	array ('B',[])
-	int i=0
+	i=0
 	data.items()[0][1]
 	with open(path) as f:
 		data=yaml.load(f, Loader=yaml.FullLoader)
