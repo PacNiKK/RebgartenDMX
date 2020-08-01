@@ -84,7 +84,7 @@ while True:
 		scene_fade(sceneE,fade)
 		change='no'
 	else:
-		pass
+		print("no")
 
 def button_callback1(channel):
 	print("fade to A")
