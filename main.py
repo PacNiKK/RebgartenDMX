@@ -23,14 +23,14 @@ print(sceneC)
 print(sceneD)
 print(sceneE)
 
+wrapper=ClientWrapper()
+client=wrapper.Client()
 
 def DmxSent(state):
 	wrapper.Stop()
 	
 #change to 'scene'
 def scene_change(scene):
-	wrapper=ClientWrapper()
-	client=wrapper.Client()
 	client.SendDmx(universe,scene,DmxSent)
 	wrapper.Run()
 	
