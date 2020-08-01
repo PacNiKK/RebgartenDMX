@@ -49,7 +49,6 @@ time.sleep(3)
 scene_change(sceneE)"""
 
 def scene_fade(scene,fade_time):
-	wrapper.Run()
 	steps=fade_time/frame
 	delta=ar.array('f',[])
 	send=ar.array('B',[])
@@ -60,12 +59,12 @@ def scene_fade(scene,fade_time):
 		#calculate new frame
 		for i_channel2 in range(len(stage)):
 			send[i_channel2]=int(stage[i_channel2]+i_time*(delta[i_channel2]/steps))
-		client.SendDmx(universe,send)
+		client.SendDmx(universe,send, DmxSent)
 		print(i_time)
 		print(i_time*(delta[i_channel2]/steps))
 		print(send)
 		time.sleep(fade_time/steps/1000)
-	wrapper.Stop()
+	wrapper.Run()
 	scene_change(scene)
 	
 scene_fade(sceneA,10000)
