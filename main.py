@@ -50,7 +50,7 @@ scene_change(sceneE)
 def scene_fade(scene):
 	delta=ar.array('B',[])
 	i_channel=0
-	for channel in scene
+	for channel in scene:
 		delta.append(scene[i_channel]-stage[i_channel])
 		i+=1
 	print(delta)
