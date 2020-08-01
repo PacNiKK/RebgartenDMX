@@ -54,9 +54,10 @@ def scene_fade(scene,time):
 	wrapper.Run()
 	steps=time/frame
 	delta=ar.array('f',[])
-	send=stage
+	send=ar.array('B',[])
 	for i_channel in range(len(scene)):
 		delta.append(scene[i_channel]-stage[i_channel])
+		send.append(stage[i_channel])
 	for i_time in range(steps):
 		#calculate new frame
 		for i_channel2 in range(len(stage)):
