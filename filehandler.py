@@ -11,6 +11,6 @@ def load_scene(path):
 		data=yaml.load(f, Loader=yaml.FullLoader)
 	list=data.items()[0][1]
 	for channel in list:
-		array[i]=channel
+		array.append(channel)
 		i+=1
 	return array
