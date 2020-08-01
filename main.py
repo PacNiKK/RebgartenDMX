@@ -49,10 +49,10 @@ scene_change(sceneD)
 time.sleep(3)
 scene_change(sceneE)"""
 
-def scene_fade(scene,time):
-	wrapper.AddEvent(time,wrapper.Stop)
+def scene_fade(scene,fade_time):
+	wrapper.AddEvent(fade_time,wrapper.Stop)
 	wrapper.Run()
-	steps=time/frame
+	steps=fade_time/frame
 	delta=ar.array('f',[])
 	send=ar.array('B',[])
 	for i_channel in range(len(scene)):
