@@ -19,7 +19,7 @@ path='scenes/'
 universe=1
 frame=50
 fade=3000
-change=no
+change='no'
 
 #load yaml files into lists
 sceneA=load_scene(path+'sceneA.yaml')
@@ -68,39 +68,39 @@ def scene_fade(scene,fade_time):
 	scene_change(scene)
 	
 while True:
-	if change==A:
+	if change=='A':
 		scene_fade(sceneA,fade)
-		change=no
-	elif change==B:
+		change='no'
+	elif change=='B':
 		scene_fade(sceneB,fade)
-		change=no
-	elif change==C:
+		change='no'
+	elif change=='C':
 		scene_fade(sceneC,fade)
-		change=no
-	elif change==D:
+		change='no'
+	elif change=='D':
 		scene_fade(sceneD,fade)
-		change=no
-	elif change==E:
+		change='no'
+	elif change=='E':
 		scene_fade(sceneE,fade)
-		change=no
+		change='no'
 	else:
 		pass
 
 def button_callback1(channel):
 	print("fade to A")
-	change=A
+	change='A'
 def button_callback2(channel):
 	print("fade to B")
-	change=B
+	change='B'
 def button_callback3(channel):
 	print("fade to C")
-	change=C
+	change='C'
 def button_callback4(channel):
 	print("fade to D")
-	change=D
+	change='D'
 def button_callback5(channel):
 	print("fade to E")
-	change=E
+	change='E'
 		
 GPIO.add_event_detect(3,GPIO.RISING,callback=button_callback1,bouncetime=250) # Setup event on pin 3 rising edge
 GPIO.add_event_detect(5,GPIO.RISING,callback=button_callback2,bouncetime=250)
