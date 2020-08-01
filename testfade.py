@@ -43,7 +43,6 @@ def SendDMXFrame():
   global loop_count
   data.append(loop_count % 255)
   loop_count += 1
-  print(loop_count)
   # send
   wrapper.Client().SendDmx(1, data, DmxSent)
 
