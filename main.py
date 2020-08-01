@@ -69,19 +69,19 @@ def scene_fade(scene,fade_time):
 	
 
 def button_callback1(channel):
-	print('fade to A')
+	global change
 	change='A'
 def button_callback2(channel):
-	print('fade to B')
+	global change
 	change='B'
 def button_callback3(channel):
-	print('fade to C')
+	global change
 	change='C'
 def button_callback4(channel):
-	print('fade to D')
+	global change
 	change='D'
 def button_callback5(channel):
-	print('fade to E')
+	global change
 	change='E'
 		
 GPIO.add_event_detect(3,GPIO.RISING,callback=button_callback1) # Setup event on pin 3 rising edge
@@ -94,18 +94,23 @@ try:
 	while True:
 		time.sleep(0.1)
 		if change=='A':
+			print('fade to A')
 			scene_fade(sceneA,fade)
 			change='no'
 		elif change=='B':
+			print('fade to B')
 			scene_fade(sceneB,fade)
 			change='no'
 		elif change=='C':
+			print('fade to C')
 			scene_fade(sceneC,fade)
 			change='no'
 		elif change=='D':
+			print('fade to D')
 			scene_fade(sceneD,fade)
 			change='no'
 		elif change=='E':
+			print('fade to E')
 			scene_fade(sceneE,fade)
 			change='no'
 		else:
