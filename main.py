@@ -67,7 +67,7 @@ def scene_fade(scene,fade_time):
 	wrapper.Run()
 	scene_change(scene)
 	
-while True
+while True:
 	if change==A:
 		scene_fade(sceneA,fade)
 		change=no
