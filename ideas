@@ -1,0 +1,21 @@
+status LED(s) in script to show script status
+button calls SceneFade via callback function
+
+Variables:
+	Array SceneA
+	Array SceneB
+	Array SceneC
+	Array SceneD
+	Array SceneE
+
+Funktionen:
+	SceneFade(newscene(as array), time)->Void
+	JamlToArray(path,filename,array)->Array
+
+V2.0
+Array to Jaml to save scenes (via hardware button?)
+Change channels live (hardware fader plus channel selector?)
+Hardware faders for scenes (similar video desk, 1 fader and buttons for next scene)
+
+V3.0
+Web interface
