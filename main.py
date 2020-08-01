@@ -68,6 +68,7 @@ def scene_fade(scene,fade_time):
 	scene_change(scene)
 	
 while True:
+	time.sleep(0.05)
 	if change=='A':
 		scene_fade(sceneA,fade)
 		change='no'
