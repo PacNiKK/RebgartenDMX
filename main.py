@@ -33,8 +33,10 @@ def DmxSent(state):
 	
 #change to 'scene'
 def scene_change(scene):
+	global stage
 	client.SendDmx(universe,scene,DmxSent)
 	wrapper.Run()
+	stage=scene
 	
 
 scene_change(sceneA)
@@ -52,7 +54,6 @@ def scene_fade(scene,time):
 	wrapper.Run()
 	steps=time/frame
 	delta=ar.array('f',[])
-	global stage
 	send=stage
 	for i_channel in range(len(scene)):
 		delta.append(scene[i_channel]-stage[i_channel])
@@ -65,7 +66,6 @@ def scene_fade(scene,time):
 		print(i_time*(delta[i_channel2]/steps))
 		print(send)
 	scene_change(scene)
-	stage=scene
 	
 scene_fade(sceneA,2000)
 scene_fade(sceneB,2000)
