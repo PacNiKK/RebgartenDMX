@@ -1,5 +1,15 @@
-from gpiozero import LED, Button
-from signal import pause
-button=Button(3)
-button.when_pressed=print("Button was pressed")
-pause()
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BOARD)
+ledPin = 12
+buttonPin = 3
+
+GPIO.setup(ledPin, GPIO.OUT)
+GPIO.setup(buttonPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+
+while True:
+  buttonState = GPIO.input(buttonPin)
+  if buttonState == False:
+    print("Pressed")
+  else:
+    print("not pressed")
