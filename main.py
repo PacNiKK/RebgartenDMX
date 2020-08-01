@@ -66,29 +66,27 @@ def scene_fade(scene,fade_time):
 	wrapper.Run()
 	scene_change(scene)
 	
-def button_callback(channel):
-	if channel==3:
-		print("fade to A")
-		scene_fade(sceneA,fade)
-	elif channel==5:
-		print("fade to B")
-		scene_fade(sceneB,fade)
-	elif channel==7:
-		print("fade to C")
-		scene_fade(sceneC,fade)
-	elif channel==11:
-		print("fade to D")
-		scene_fade(sceneD,fade)
-	elif channel==13:
-		print("fade to E")
-		scene_fade(sceneE,fade)
-	else:
-		pass
+
+def button_callback1(channel):
+	print("fade to A")
+	scene_fade(sceneA,fade)
+def button_callback2(channel):
+	print("fade to B")
+	scene_fade(sceneB,fade)
+def button_callback3(channel):
+	print("fade to C")
+	scene_fade(sceneC,fade)
+def button_callback4(channel):
+	print("fade to D")
+	scene_fade(sceneD,fade)
+def button_callback5(channel):
+	print("fade to E")
+	scene_fade(sceneE,fade)
 		
-GPIO.add_event_detect(3,GPIO.RISING,callback=button_callback,bouncetime=250) # Setup event on pin 3 rising edge
-GPIO.add_event_detect(5,GPIO.RISING,callback=button_callback,bouncetime=250)
-GPIO.add_event_detect(7,GPIO.RISING,callback=button_callback,bouncetime=250)
-GPIO.add_event_detect(11,GPIO.RISING,callback=button_callback,bouncetime=250)
-GPIO.add_event_detect(13,GPIO.RISING,callback=button_callback,bouncetime=250)
+GPIO.add_event_detect(3,GPIO.RISING,callback=button_callback1,bouncetime=250) # Setup event on pin 3 rising edge
+GPIO.add_event_detect(5,GPIO.RISING,callback=button_callback2,bouncetime=250)
+GPIO.add_event_detect(7,GPIO.RISING,callback=button_callback3,bouncetime=250)
+GPIO.add_event_detect(11,GPIO.RISING,callback=button_callback4,bouncetime=250)
+GPIO.add_event_detect(13,GPIO.RISING,callback=button_callback5,bouncetime=250)
 message = input("Press enter to quit\n\n") # Run until someone presses enter
 GPIO.cleanup() # Clean up
