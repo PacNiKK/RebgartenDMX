@@ -1,4 +1,4 @@
 import ola
-import filehandler.py
+import filehandler
 path='scenes/sceneA.yaml'
 print(load_scene(path))
