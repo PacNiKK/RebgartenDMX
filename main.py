@@ -69,7 +69,10 @@ def scene_fade(scene,fade_time):
 
 def button_callback1(channel):
 	print("fade to A")
-	scene_fade(sceneA,fade)
+	global stage
+	client.SendDmx(universe,sceneA,DmxSent)
+	wrapper.Run()
+	stage=scene
 def button_callback2(channel):
 	print("fade to B")
 	scene_fade(sceneB,fade)
