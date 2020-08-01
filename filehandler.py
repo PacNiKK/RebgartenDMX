@@ -7,4 +7,4 @@ import numpy as np
 def load_scene(path):
 	with open(path) as f:
 		data=yaml.load(f, Loader=yaml.FullLoader)
-	return np.asarray(data.items()[0][1])
+	return np.asarray(data.items()[0][1],dtype=np.int)
