@@ -11,11 +11,7 @@ GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(11, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.add_event_detect(3,GPIO.RISING,callback=button_callback,bouncetime=250) # Setup event on pin 3 rising edge
-GPIO.add_event_detect(5,GPIO.RISING,callback=button_callback,bouncetime=250)
-GPIO.add_event_detect(7,GPIO.RISING,callback=button_callback,bouncetime=250)
-GPIO.add_event_detect(11,GPIO.RISING,callback=button_callback,bouncetime=250)
-GPIO.add_event_detect(13,GPIO.RISING,callback=button_callback,bouncetime=250)
+
 
 #path to scene files
 path='scenes/'
@@ -89,6 +85,10 @@ def button_callback(channel):
 	else:
 		pass
 		
-
+GPIO.add_event_detect(3,GPIO.RISING,callback=button_callback,bouncetime=250) # Setup event on pin 3 rising edge
+GPIO.add_event_detect(5,GPIO.RISING,callback=button_callback,bouncetime=250)
+GPIO.add_event_detect(7,GPIO.RISING,callback=button_callback,bouncetime=250)
+GPIO.add_event_detect(11,GPIO.RISING,callback=button_callback,bouncetime=250)
+GPIO.add_event_detect(13,GPIO.RISING,callback=button_callback,bouncetime=250)
 message = input("Press enter to quit\n\n") # Run until someone presses enter
 GPIO.cleanup() # Clean up
