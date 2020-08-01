@@ -39,11 +39,11 @@ def SendDMXFrame():
   wrapper.AddEvent(TICK_INTERVAL, SendDMXFrame)
 
   # compute frame here
-  data = ar.array('B')
+  data = ar.array('B',[])
   global loop_count
   data.append(loop_count % 255)
   loop_count += 1
-
+  print(loop_count)
   # send
   wrapper.Client().SendDmx(1, data, DmxSent)
 
