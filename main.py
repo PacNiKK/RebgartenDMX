@@ -6,8 +6,8 @@ from ola.ClientWrapper import ClientWrapper
 #path to scene files
 path='scenes/'
 
-global universe=1
-global frame=50
+universe=1
+frame=50
 
 #load yaml files into lists
 sceneA=load_scene(path+'sceneA.yaml')
@@ -16,7 +16,7 @@ sceneC=load_scene(path+'sceneC.yaml')
 sceneD=load_scene(path+'sceneD.yaml')
 sceneE=load_scene(path+'sceneE.yaml')
 
-global stage=sceneA
+stage=sceneA
 #scene_change(stage)
 
 print(sceneA)
@@ -50,6 +50,7 @@ scene_change(sceneE)"""
 def scene_fade(scene,time):
 	steps=time*1000/frame
 	delta=ar.array('h',[])
+	global stage
 	i_channel=0
 	for channel in scene:
 		delta.append(scene[i_channel]-stage[i_channel])
