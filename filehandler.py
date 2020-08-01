@@ -1,10 +1,7 @@
-#import yaml
+import yaml
+with open('scenes/sceneA.yaml') as f:
 
-channels = dict(1:{value=255})
-print(channels)
-for i in range(23):
-	channels i[value=255]
-	print channels
+	data=yaml.load(f, Loader=yaml.FullLoader)
+	print(data)
 
-#with open('scenes/sceneA.yaml') as f:
-#	data = yaml.dump(channels,f)
+
