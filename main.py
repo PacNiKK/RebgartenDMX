@@ -48,7 +48,7 @@ time.sleep(3)
 scene_change(sceneE)"""
 
 def scene_fade(scene):
-	delta=ar.array('b',[])
+	delta=ar.array('h',[])
 	i_channel=0
 	for channel in scene:
 		delta.append(scene[i_channel]-stage[i_channel])
