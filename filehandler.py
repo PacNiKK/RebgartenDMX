@@ -1,7 +1,8 @@
 import yaml
-with open('scenes/sceneA.yaml') as f:
+def load_scene(path)
+with open(path) as f:
 
 	data=yaml.load(f, Loader=yaml.FullLoader)
-	print(data.items()[0][1])
+	return data.items()[0][1]
 
 
