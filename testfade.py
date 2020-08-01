@@ -1,51 +1,9 @@
-import time
-from filehandler import load_scene
-from ola.ClientWrapper import ClientWrapper
-import array as ar
-
-#path to scene files
-path='scenes/'
-
-universe=1
-frame=50
-
-#load yaml files into lists
-sceneA=load_scene(path+'sceneA.yaml')
-sceneB=load_scene(path+'sceneB.yaml')
-sceneC=load_scene(path+'sceneC.yaml')
-sceneD=load_scene(path+'sceneD.yaml')
-sceneE=load_scene(path+'sceneE.yaml')
-
-stage=sceneA
-#scene_change(stage)
-
-print(sceneA)
-print(sceneB)
-print(sceneC)
-print(sceneD)
-print(sceneE)
-
-wrapper = None
-loop_count = 0
-TICK_INTERVAL = 100  # in ms
-
-def DmxSent(state):
-  if not state.Succeeded():
-    wrapper.Stop()
-
-def SendDMXFrame():
-  # schdule a function call in 100ms
-  # we do this first in case the frame computation takes a long time.
-  wrapper.AddEvent(TICK_INTERVAL, SendDMXFrame)
-
-  # compute frame here
-  data = ar.array('B',[])
-  global loop_count
-  data.append(loop_count % 255)
-  loop_count += 1
-  # send
-  wrapper.Client().SendDmx(1, data, DmxSent)
-
-wrapper = ClientWrapper()
-wrapper.AddEvent(TICK_INTERVAL, SendDMXFrame)
-wrapper.Run()
+    import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
+    def button_callback(channel):
+        print("Button was pushed!")
+    GPIO.setwarnings(False) # Ignore warning for now
+    GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
+    GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
+    GPIO.add_event_detect(10,GPIO.RISING,callback=button_callback) # Setup event on pin 10 rising edge
+    message = input("Press enter to quit\n\n") # Run until someone presses enter
+    GPIO.cleanup() # Clean up

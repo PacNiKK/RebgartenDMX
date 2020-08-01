@@ -15,8 +15,7 @@ sceneB=load_scene(path+'sceneB.yaml')
 sceneC=load_scene(path+'sceneC.yaml')
 sceneD=load_scene(path+'sceneD.yaml')
 sceneE=load_scene(path+'sceneE.yaml')
-
-#scene_change(stage)
+stage=sceneA
 
 print(sceneA)
 print(sceneB)
@@ -37,16 +36,7 @@ def scene_change(scene):
 	wrapper.Run()
 	stage=scene
 	
-
 scene_change(sceneA)
-"""time.sleep(3)
-scene_change(sceneB)
-time.sleep(3)
-scene_change(sceneC)
-time.sleep(3)
-scene_change(sceneD)
-time.sleep(3)
-scene_change(sceneE)"""
 
 def scene_fade(scene,fade_time):
 	steps=fade_time/frame
@@ -64,9 +54,3 @@ def scene_fade(scene,fade_time):
 		time.sleep(float(fade_time)/float(steps)/1000)
 	wrapper.Run()
 	scene_change(scene)
-	
-scene_fade(sceneA,10000)
-scene_fade(sceneB,10000)
-scene_fade(sceneC,10000)
-scene_fade(sceneD,10000)
-scene_fade(sceneE,10000)
