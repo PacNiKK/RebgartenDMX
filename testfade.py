@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
 def button_callback(channel):
-    print("Button was pushed!")
+    print(channel)
 GPIO.setwarnings(False) # Ignore warning for now
 GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
 GPIO.setup(3, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Set pin 3 to be an input pin and set initial value to be pulled low (off)
