@@ -58,6 +58,7 @@ def scene_fade(scene,fade_time):
 	scene_change(scene)
 	
 def button_callback(channel):
+	global scene_change
 	if channel==3:
 		scene_change(sceneA)
 	elif channel==5:
