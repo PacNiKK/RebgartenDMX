@@ -16,7 +16,6 @@ sceneC=load_scene(path+'sceneC.yaml')
 sceneD=load_scene(path+'sceneD.yaml')
 sceneE=load_scene(path+'sceneE.yaml')
 
-stage=sceneA
 #scene_change(stage)
 
 print(sceneA)
@@ -66,7 +65,7 @@ def scene_fade(scene,fade_time):
 		print(i_time*(delta[i_channel2]/steps))
 		print(send)
 		time.sleep(fade_time/steps/1000)
-	wrapper.stop()
+	wrapper.Stop()
 	scene_change(scene)
 	
 scene_fade(sceneA,10000)
