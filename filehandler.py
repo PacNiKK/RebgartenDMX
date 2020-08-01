@@ -1,11 +1,11 @@
 #filehandler.py
 import yaml
-import array
+import array as ar
 import numpy as np
 
 #imports a yaml list in 'path' and returns it as an array
 def load_scene(path):
-	array.array ('B',[])
+	array=ar.array ('B',[])
 	i=0
 	with open(path) as f:
 		data=yaml.load(f, Loader=yaml.FullLoader)
