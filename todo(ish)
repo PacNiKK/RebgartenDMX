@@ -1,3 +1,5 @@
+These are the things that are todi in the current version, plus a few ideas for future implementation
+
 status LED(s) in script to show script status
 button calls SceneFade via callback function
 
