@@ -92,7 +92,6 @@ GPIO.add_event_detect(13,GPIO.RISING,callback=button_callback5)
 
 try:
 	while True:
-		time.sleep(0.1)
 		if change=='A':
 			print('fade to A')
 			scene_fade(sceneA,fade)
@@ -114,6 +113,7 @@ try:
 			scene_fade(sceneE,fade)
 			change='no'
 		else:
+			time.sleep(0.1)
 			
 except KeyboardInterrupt:
   GPIO.cleanup()
