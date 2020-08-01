@@ -27,7 +27,7 @@ sceneB=load_scene(path+'sceneB.yaml')
 sceneC=load_scene(path+'sceneC.yaml')
 sceneD=load_scene(path+'sceneD.yaml')
 sceneE=load_scene(path+'sceneE.yaml')
-stage=sceneA
+#stage=sceneA
 
 print(sceneA)
 print(sceneB)
