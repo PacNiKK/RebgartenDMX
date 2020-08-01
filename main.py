@@ -32,7 +32,7 @@ def DmxSent(state):
 	
 #change to 'scene'
 def scene_change(scene):
-	client.SendDmx(universe,scene,DmxSent)
+	client.SendDmx(universe,[255,255,255],DmxSent)
 	print(scene)
 	wrapper.Run()
 	
