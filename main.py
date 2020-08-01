@@ -62,6 +62,7 @@ def scene_fade(scene,time):
 			send[i_channel2]=int(stage[i_channel2]+i_time*(delta[i_channel2]/steps))
 		client.SendDmx(universe,send)
 		print(i_time)
+		print(i_time*(delta[i_channel2]/steps))
 		print(send)
 	scene_change(scene)
 	stage=scene
