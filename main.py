@@ -114,7 +114,6 @@ try:
 			scene_fade(sceneE,fade)
 			change='no'
 		else:
-			print('no')
 			
 except KeyboardInterrupt:
   GPIO.cleanup()
