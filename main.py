@@ -66,7 +66,7 @@ def scene_fade(scene,fade_time):
 		print(i_time)
 		print(i_time*(delta[i_channel2]/steps))
 		print(send)
-		time.sleep(time/steps/1000)
+		time.sleep(fade_time/steps/1000)
 	scene_change(scene)
 	
 scene_fade(sceneA,10000)
