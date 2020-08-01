@@ -6,8 +6,8 @@ from ola.ClientWrapper import ClientWrapper
 #path to scene files
 path='scenes/'
 
-universe=1
-frame=50
+global universe=1
+global frame=50
 
 #load yaml files into lists
 sceneA=load_scene(path+'sceneA.yaml')
@@ -16,7 +16,7 @@ sceneC=load_scene(path+'sceneC.yaml')
 sceneD=load_scene(path+'sceneD.yaml')
 sceneE=load_scene(path+'sceneE.yaml')
 
-stage=sceneA
+global stage=sceneA
 #scene_change(stage)
 
 print(sceneA)
