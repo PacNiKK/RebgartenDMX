@@ -1,4 +1,4 @@
-import array
+import array as ar
 import time
 from filehandler import load_scene
 from ola.ClientWrapper import ClientWrapper
