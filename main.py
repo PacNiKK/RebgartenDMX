@@ -103,10 +103,8 @@ def button_callback5(channel):
 	print("fade to E")
 	change='E'
 		
-GPIO.add_event_detect(3,GPIO.RISING,callback=button_callback1,bouncetime=250) # Setup event on pin 3 rising edge
-GPIO.add_event_detect(5,GPIO.RISING,callback=button_callback2,bouncetime=250)
-GPIO.add_event_detect(7,GPIO.RISING,callback=button_callback3,bouncetime=250)
-GPIO.add_event_detect(11,GPIO.RISING,callback=button_callback4,bouncetime=250)
-GPIO.add_event_detect(13,GPIO.RISING,callback=button_callback5,bouncetime=250)
-message = input("Press enter to quit\n\n") # Run until someone presses enter
-GPIO.cleanup() # Clean up
+GPIO.add_event_detect(3,GPIO.RISING,callback=button_callback1) # Setup event on pin 3 rising edge
+GPIO.add_event_detect(5,GPIO.RISING,callback=button_callback2)
+GPIO.add_event_detect(7,GPIO.RISING,callback=button_callback3)
+GPIO.add_event_detect(11,GPIO.RISING,callback=button_callback4)
+GPIO.add_event_detect(13,GPIO.RISING,callback=button_callback5)
