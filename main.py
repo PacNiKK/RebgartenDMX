@@ -58,18 +58,18 @@ def scene_fade(scene,fade_time):
 	scene_change(scene)
 	
 def button_callback(channel):
-if channel==3:
-	scene_fade(sceneA,fade)
-elif channel==5:
-	scene_fade(sceneB,fade)
-elif channel==7:
-	scene_fade(sceneC,fade)
-elif channel==11:
-	scene_fade(sceneD,fade)
-elif channel==13:
-	scene_fade(sceneE,fade)
-else:
-	pass
+	if channel==3:
+		scene_fade(sceneA,fade)
+	elif channel==5:
+		scene_fade(sceneB,fade)
+	elif channel==7:
+		scene_fade(sceneC,fade)
+	elif channel==11:
+		scene_fade(sceneD,fade)
+	elif channel==13:
+		scene_fade(sceneE,fade)
+	else:
+		pass
 		
 GPIO.setwarnings(False) # Ignore warning for now
 GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
