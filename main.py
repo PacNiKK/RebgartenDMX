@@ -37,11 +37,11 @@ def scene_change(scene):
 	
 
 scene_change(sceneA)
-time.sleep(1000)
+time.sleep(1)
 scene_change(sceneB)
-time.sleep(1000)
+time.sleep(1)
 scene_change(sceneC)
-time.sleep(1000)
+time.sleep(1)
 scene_change(sceneD)
-time.sleep(1000)
+time.sleep(1)
 scene_change(sceneE)
