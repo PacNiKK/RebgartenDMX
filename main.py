@@ -17,11 +17,11 @@ sceneE=load_scene(path+'sceneE.yaml')
 stage=sceneA
 
 
-print('load scene A: '+sceneA)
-print('load scene B: '+sceneB)
-print('load scene C: '+sceneC)
-print('load scene D: '+sceneD)
-print('load scene E: '+sceneE)
+print(sceneA)
+print(sceneB)
+print(sceneC)
+print(sceneD)
+print(sceneE)
 
 
 def DmxSent(state):
