@@ -14,6 +14,9 @@ sceneC=load_scene(path+'sceneC.yaml')
 sceneD=load_scene(path+'sceneD.yaml')
 sceneE=load_scene(path+'sceneE.yaml')
 
+stage=sceneA
+
+
 print('load scene A: '+sceneA)
 print('load scene B: '+sceneB)
 print('load scene C: '+sceneC)
@@ -25,7 +28,19 @@ def DmxSent(state):
 	wrapper.Stop()
 	
 #change to 'scene'
-def scene_change(scene, time):
-pass	
+def scene_change(scene):
+	wrapper=ClientWrapper()
+	client=wrapper.Client()
+	client.SendDmx(universe,scene,DmxSent)
+	wrapper.Run()
 	
 
+scene_change(sceneA)
+time.sleep(1000)
+scene_change(sceneB)
+time.sleep(1000)
+scene_change(sceneC)
+time.sleep(1000)
+scene_change(sceneD)
+time.sleep(1000)
+scene_change(sceneE)

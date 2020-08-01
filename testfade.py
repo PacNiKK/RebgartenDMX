@@ -15,7 +15,7 @@ universe
 
 UPDATE_INTERVAL = 25  # In ms, this comes about to ~40 frames a second
 SHUTDOWN_INTERVAL = 10000  # in ms, This is 10 seconds
-DMX_DATA_SIZE = 100
+DMX_DATA_SIZE = 24
 UNIVERSE = 1
 
 
